@@ -1,0 +1,9 @@
+!!! 5
+%html
+	%head
+		%title Pinteresting
+		= render "layouts/rails_default"
+	%body
+		- flash.each do |name, msg|
+			= content_tag :div, msg, class: "alert alert-info"
+		= yield
